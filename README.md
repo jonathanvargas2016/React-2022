@@ -15,3 +15,15 @@ permite escribir HTML dentro del JS
 ```
 $npx create-react-app my-app
 ```
+
+#Importante al momento de renderizar un componente
+
+Si deseaba renderizar un componente de React, comience su nombre con una letra MAYUSCULA.
+
+#Formas de renderizar
+
+1. forma de renderizar
+<Location></Location>
+
+2 forma de renderizar
+<WeatherData/>
