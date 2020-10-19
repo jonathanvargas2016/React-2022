@@ -1,5 +1,6 @@
 import React from "react";
 import WeatherIcons from 'react-weathericons';
+import PropTypes from 'prop-types';
 import {
     CLOUDY,
     CLOUD,
@@ -7,7 +8,7 @@ import {
     SUN,
     WINDY,
     RAIN
-} from "./../constants/Weathers";
+} from "../../../constants/Weathers";
 
 //cuando hay un solo parametro que recibe no es necesario agregar los ()
 const stateToIconName = weatherState =>{
@@ -41,5 +42,11 @@ const WeatherTemperature = ({temperature,weatherState}) =>(
         </span>
     </div>
 );
+
+//validamos para el tipo de datos con PropTypes
+WeatherTemperature.propTypes = {
+    temperature: PropTypes.number.isRequired,
+    weatherState:PropTypes.string,
+}
 
 export default WeatherTemperature;

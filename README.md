@@ -26,7 +26,7 @@ Si deseaba renderizar un componente de React, comience su nombre con una letra M
 <Location></Location>
 
 2 forma de renderizar
-<WeatherData/>
+<Index/>
 
 
 #{} -> con esto se pone el valor de una variable en el html
@@ -46,3 +46,43 @@ console.log(nombreUsuario)
 const numeros = [0,1,2]
 const [cero,uno,dos]  = numeros
 console.log(cero)
+
+#Template String
+consiste en usar lo siguiente `${}`
+
+#Prop types
+libreria para evitar errores.para garantizar que los componentes usen el tipo de datos correcto y pasen los datos correctos
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

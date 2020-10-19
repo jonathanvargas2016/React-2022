@@ -1,4 +1,6 @@
 import React from "react";
+import PropTypes from 'prop-types';
+
 //mediante props extraigo los parametros enviados desde otro componente
 //{} -> con esto se pone el valor de una variable en el html
 
@@ -22,6 +24,10 @@ const Location = ({city}) =>{ //destructuring
             <h1>{city}</h1>
         </div>
     )
+}
+
+Location.propTypes = {
+    city:PropTypes.string.isRequired
 }
 
 export default Location;
