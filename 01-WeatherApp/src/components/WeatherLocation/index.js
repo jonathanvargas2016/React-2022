@@ -1,10 +1,11 @@
 import React from 'react'
 import Location from "./location";
 import Index from "./WeatherData";
+import './styles.css'
 
 const WeatherLocation = () =>(
 
-    <div>
+    <div className='weatherLocationCont'>
         <Location city={'Cuenca'}></Location>
         <Index/>
     </div>

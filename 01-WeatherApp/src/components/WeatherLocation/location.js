@@ -1,5 +1,7 @@
 import React from "react";
 import PropTypes from 'prop-types';
+import './styles.css'
+
 
 //mediante props extraigo los parametros enviados desde otro componente
 //{} -> con esto se pone el valor de una variable en el html
@@ -20,7 +22,7 @@ import PropTypes from 'prop-types';
 
 const Location = ({city}) =>{ //destructuring
     return (
-        <div>
+        <div className='locationCont'>
             <h1>{city}</h1>
         </div>
     )
