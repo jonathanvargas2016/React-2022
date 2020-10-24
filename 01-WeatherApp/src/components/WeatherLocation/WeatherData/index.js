@@ -1,16 +1,14 @@
 import React from "react";
 import WeatherTemperature from "./weatherTemperature";
 import WeatherExtraInfo from "./weatherExtraInfo";
-import {
-    SNOW
-} from "../../../constants/Weathers";
 import './style.css'
 
-const WeatherData = () => (
-    <div className='weatherDataCont'>
-        <WeatherTemperature temperature={20} weatherState={SNOW} />
-        <WeatherExtraInfo wind={'10m/s'} huminity={80} />
+const WeatherData = ({data}) => {
+    const {temperature,weatherState,humidity,wind} = data
+    return <div className='weatherDataCont'>
+        <WeatherTemperature temperature={temperature} weatherState={weatherState} />
+        <WeatherExtraInfo wind={wind} humidity={humidity} />
     </div>
-)
 
+}
 export default WeatherData;

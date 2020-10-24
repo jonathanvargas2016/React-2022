@@ -21,6 +21,7 @@ import './styles.css'
 
 
 const Location = ({city}) =>{ //destructuring
+
     return (
         <div className='locationCont'>
             <h1>{city}</h1>
