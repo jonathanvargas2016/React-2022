@@ -3,6 +3,7 @@ import Location from "./location";
 import WeatherData from "./WeatherData";
 import './styles.css'
 import PropTypes from 'prop-types';
+import TransformWeather from "../../services/transformWeather";
 import {
     SUN,
     WINDY
@@ -50,7 +51,7 @@ class WeatherLocation extends Component {
             .then(response => response.json())
             .then(weather_data => {
                 console.log(weather_data)
-                const data = this.getData(weather_data)
+                const data = TransformWeather(weather_data)
                 //modifico los datos con setState
                 this.setState({data})
             })
@@ -61,25 +62,6 @@ class WeatherLocation extends Component {
         // this.setState({
         //     data:data2
         // })
-    }
-    getWeatherState = (weather) =>{
-        console.log(weather)
-        return SUN
-    }
-
-    getData = weather_data =>{
-        const {humidity,temp} = weather_data.main;
-        const {speed} = weather_data.wind;
-        const weatherState = this.getWeatherState(weather_data.weather);
-
-        const data = {
-            humidity,
-            temperature:temp,
-            weatherState,
-            wind:`${speed} m/s`
-
-        }
-        return data
     }
 
     //renderizacion
