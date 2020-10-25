@@ -1,10 +1,10 @@
 import {
     SUN,
-    WINDY
+
 } from '../constants/Weathers';
 
 const getWeatherState = (weather) =>{
-    console.log(weather)
+    //console.log(weather)
     return SUN
 }
 
