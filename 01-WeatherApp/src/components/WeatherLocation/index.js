@@ -4,11 +4,11 @@ import WeatherData from "./WeatherData";
 import './styles.css'
 import PropTypes from 'prop-types';
 import TransformWeather from "../../services/transformWeather";
+import CircularProgress from '@material-ui/core/CircularProgress';
 
-
-const location = 'Quito'
 const key = '927958a9f637a1a8b0e46e9118bf112b'
-const api_weather = `http://api.openweathermap.org/data/2.5/weather?q=${location}&appid=${key}&units=metric`
+const url = 'http://api.openweathermap.org/data/2.5/weather'
+
 
 // const data1 = {
 //     temperature:20,
@@ -31,17 +31,17 @@ const api_weather = `http://api.openweathermap.org/data/2.5/weather?q=${location
 //****transformacion del functional component to Class component
 class WeatherLocation extends Component {
 
-    constructor() {
+    constructor({city}) {
         super();
         //el estado de este componente...
         this.state = {
             data:null,
-            city:'Quito'
+            city,
         }
     }
 
     //funcion
-    handleUpdateClick = async () =>{
+    handleUpdateClick = (api_weather) =>{
 
         //peticion mediante fetch
         fetch(api_weather)
@@ -61,7 +61,9 @@ class WeatherLocation extends Component {
 
     //se ejecuta una unica vez
     componentDidMount() {
-        this.handleUpdateClick();
+        const {city} = this.state
+        const api_weather = `${url}?q=${city}&appid=${key}&units=metric`
+        this.handleUpdateClick(api_weather);
     }
 
     //se ejecuta despues de que el componente fue renderizado
@@ -81,9 +83,10 @@ class WeatherLocation extends Component {
     render = () => {
         const {city,data} = this.state
         return (
+
             <div className='weatherLocationCont'>
                 <Location city={city}></Location>
-                {data? <WeatherData data={data}/>:'Cargando...'}
+                {data? <WeatherData data={data}/>:<CircularProgress color="secondary" />}
                 {/*<button onClick={this.handleUpdateClick}>Actualizar</button>*/}
             </div>
         )
@@ -97,9 +100,18 @@ WeatherLocation.propType = {
         temperature:PropTypes.number.isRequired,
         weatherState:PropTypes.string.isRequired,
         humidity:PropTypes.number.isRequired,
-        wind:PropTypes.string.isRequired
-    })
+        wind:PropTypes.string.isRequired,
+
+    }),
+    city:PropTypes.string.isRequired
 }
+
+
+
+
+
+
+
 
 //importante se debe usar
 export default WeatherLocation;

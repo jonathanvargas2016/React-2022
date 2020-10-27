@@ -8,7 +8,9 @@ import {
     SNOW,
     SUN,
     WINDY,
-    RAIN
+    RAIN,
+    THUNDER,
+    DRIZZLE
 } from "../../../constants/Weathers";
 
 //cuando hay un solo parametro que recibe no es necesario agregar los ()
@@ -26,6 +28,10 @@ const stateToIconName = weatherState =>{
             return 'snow'
         case WINDY:
             return 'windy'
+        case THUNDER:
+            return 'day-thunderstorm'
+        case DRIZZLE:
+            return 'day-showers'
         default:
             return 'day-sunny'
     }
