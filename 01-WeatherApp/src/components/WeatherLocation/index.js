@@ -81,10 +81,11 @@ class WeatherLocation extends Component {
 
     //renderizacion
     render = () => {
+        const {onWeatherLocationClic} = this.props
         const {city,data} = this.state
         return (
 
-            <div className='weatherLocationCont'>
+            <div className='weatherLocationCont' onClick={onWeatherLocationClic}>
                 <Location city={city}></Location>
                 {data? <WeatherData data={data}/>:<CircularProgress color="secondary" />}
                 {/*<button onClick={this.handleUpdateClick}>Actualizar</button>*/}
@@ -103,15 +104,9 @@ WeatherLocation.propType = {
         wind:PropTypes.string.isRequired,
 
     }),
-    city:PropTypes.string.isRequired
+    city:PropTypes.string.isRequired,
+    onWeatherLocationClic:PropTypes.func,
 }
-
-
-
-
-
-
-
 
 //importante se debe usar
 export default WeatherLocation;

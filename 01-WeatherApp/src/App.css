@@ -36,3 +36,17 @@
     transform: rotate(360deg);
   }
 }
+
+.red{
+  background: red;
+  height: 100px;
+}
+.green{
+  background: green;
+  height: 100px;
+}
+.blue{
+  background: blue;
+  height: 100px;
+  min-width: 50px;
+}

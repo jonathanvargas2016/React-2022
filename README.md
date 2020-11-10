@@ -54,7 +54,14 @@ consiste en usar lo siguiente `${}`
 libreria para evitar errores.para garantizar que los componentes usen el tipo de datos correcto y pasen los datos correctos
 
 
+#Grid Fluid
+Fluid intenta usar todo el ancho de la pantalla
 
+#Sistema de grillas
+xs -> celulares
+sm -> tablets
+md -> notebooks
+lg -> laptops, 
 
 
 
