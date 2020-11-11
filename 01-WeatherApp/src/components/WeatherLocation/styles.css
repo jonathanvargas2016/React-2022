@@ -1,8 +1,11 @@
 
 .weatherLocationCont{
-    margin: 30px;
-    width: 400px;
-    padding: 15px;
+    margin-left: 10px;
+    margin-right: 10px;
+    width: calc(100% - 20px);
+    min-width: 370px;
+    padding: 25px;
+    box-sizing: border-box;
     font-family: 'Roboto',sans-serif;
     box-shadow: 12px 3px 18px -4px rgba(0,0,0,0.54); /*https://www.cssmatic.com/box-shadow*/
     background: rgba(0,200,0,0.1);

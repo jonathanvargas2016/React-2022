@@ -63,6 +63,9 @@ sm -> tablets
 md -> notebooks
 lg -> laptops, 
 
+#Media Query
+Utiliza la @media regla para incluir un bloque de propiedades CSS solo si una determinada condición es verdadera.
+
 
 
 

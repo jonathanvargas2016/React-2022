@@ -1,0 +1,9 @@
+
+/*MEDIA QUERY*/
+@media (max-width: 48em){
+    .locationList{
+        max-height: 30vh;
+        overflow: auto;/*hace aparecer automaticamente la barra de scroll*/
+        margin-bottom: 20px;
+    }
+}
