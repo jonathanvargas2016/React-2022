@@ -14,14 +14,14 @@ const cities = [
     'Buenos Aires,ar',
     'Washington dc,us',
     'Bogota,col',
-    'Ciudad de México,mx'
+    'Quito,ec'
 ]
 class App extends Component{
 
     constructor() {
         super();
         this.state ={
-            city:'Nueva Ciudad'
+            city:null
         }
     }
 
@@ -102,7 +102,13 @@ class App extends Component{
 
                       <Paper elevation={4}>
                           <div className='detail'>
-                              <ForecastExtended city={city}></ForecastExtended>
+
+                              {city?
+                                  <ForecastExtended city={city}></ForecastExtended>:
+                                  <h2 className='app-title'>No se selecciono ciudad</h2>
+
+                              }
+
                           </div>
                       </Paper>
 
