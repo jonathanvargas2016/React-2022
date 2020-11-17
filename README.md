@@ -61,14 +61,10 @@ Fluid intenta usar todo el ancho de la pantalla
 xs -> celulares
 sm -> tablets
 md -> notebooks
-lg -> laptops, 
+lg -> laptops
 
 #Media Query
 Utiliza la @media regla para incluir un bloque de propiedades CSS solo si una determinada condición es verdadera.
-
-
-
-
 
 
 

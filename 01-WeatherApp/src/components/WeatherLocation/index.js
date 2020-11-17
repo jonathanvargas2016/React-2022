@@ -70,10 +70,14 @@ class WeatherLocation extends Component {
     // componentDidMount() {
     //     console.log('componentDidMount')
     // }
+    //Este método del ciclo de vida es de tipo montaje.
+    // Se ejecuta justo antes del primer renderizado del componente
     // componentWillUpdate() {
     //     console.log('componentWillUpdate')
     // }
     //
+    //Método de actualización que se ejecuta
+    // justamente después de haberse producido la actualización del componente
     // componentDidUpdate(prevProps, prevState, snapshot) {
     //     console.log('componentDidUpdate')
     // }
