@@ -51,6 +51,7 @@ class ForecastExtended extends Component {
         }
     }
 
+    
 
     renderForecastItemDays = (forecastData) =>{
         //array de dias
