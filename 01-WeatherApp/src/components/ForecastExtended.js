@@ -29,26 +29,39 @@ class ForecastExtended extends Component {
             forecastData:null,
         }
     }
-    async componentDidMount() {
-        const url_forecast = `${this.url}?q=${this.props.city}&appid=${this.key}`
+
+    async updateCity (city){
+        const url_forecast = `${this.url}?q=${city}&appid=${this.key}&units=metric`
         const res = await fetch(url_forecast)
         const data = await res.json()
-        console.log(data)
         const forecastData = TransformForecast(data)
         this.setState({forecastData})
     }
 
-    renderForecastItemDays = () =>{
-        //array de dias
-        // return days.map(day => (<ForecastItem weekDay={day}
-        //                                       key={day}
-        //                                       hour={10}
-        //                                       data={data}>
-        //
-        //     </ForecastItem>
-        // ))
 
-        return (<h1>'Render Items'</h1>)
+    async componentDidMount() {
+        this.updateCity(this.props.city)
+    }
+
+    //ciclo de vida para actualizaciones
+    componentWillReceiveProps(nextProps) {
+        if(nextProps.city != this.props.city){
+            this.setState({forecastData:null})
+            this.updateCity(nextProps.city)
+        }
+    }
+
+
+    renderForecastItemDays = (forecastData) =>{
+        //array de dias
+        return forecastData.map(forecast => (
+            <ForecastItem weekDay={forecast.weekDay}
+                          key={`${forecast.weekDay} ${forecast.hour}`}
+                          hour={forecast.hour}
+                          data={forecast.data}>
+
+            </ForecastItem>
+        ))
 
     }
 
@@ -60,7 +73,7 @@ class ForecastExtended extends Component {
             <div>
                 <h2 className='forescast-title'>Pronostico extendido para {city}</h2>
                 {forecastData?
-                    this.renderForecastItemDays():this.renderProgress()}
+                    this.renderForecastItemDays(forecastData):this.renderProgress()}
             </div>
         )
     }
