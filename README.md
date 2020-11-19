@@ -68,13 +68,47 @@ Utiliza la @media regla para incluir un bloque de propiedades CSS solo si una de
 
 
 
+#React LifeCycle
+	
+	fase de Mounting -> primera vez q se renderiza en el dom.
+	constructor(this.state)
+	componentWillMount -> se ejecuta una sola vez
+	render
+	componentDidMount -> se ejecuta una sola vez
+	
+	
+	
+--- Update
+	componentWillReceiveProps(nextProps)
+	shouldComponetUpdate(return true/false)
+	componentWillUpdate()  -> se ejecuta despues del render
+	render
+	componentDidUpdate
+	
+#DOM
+	es una interfaz de programación de aplicaciones (API) para documentos HTML y XML
+#ReactDom
+	reactDom es para renderizar los componentes en el DOM.
+	 is the process of transforming your react components into DOM (Document Object Model) 
+	 nodes that your browser can understand and display on the screen.
+	
+#Virtual DOM (document object model)
+	
+	representacion liviana del DOM.
+	
 
+#OneWayData Flow. Modificacion del dato modifica la vista.
 
+	estado inicial -> 1.virtual DOM => DOM real =>cambio de estado => 2. virtual DOM => Compara 1 y 2 DOM virtual =>Actualiza solo lo necesario del DOM
 
+#Proceso de Reconciliation. revisa en el DOM virtual.
+	
+	compara (aplicando heuristica) los componentes resultantes del nuevo estado con los anteriores
+	y busca por cambios.
 
+#React Fiber
 
-
-
+	
 
 
 
