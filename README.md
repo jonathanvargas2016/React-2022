@@ -110,19 +110,21 @@ Utiliza la @media regla para incluir un bloque de propiedades CSS solo si una de
 
 	
 
+#SPA vs MPA
+	
+#REDUX 
+	Es un framework q se encarga de manejar el estado de la aplicacion. El estado es unico y global (store)
+	El estado se modifica solo por acciones.
+	
+#Instalar REDUX
+```
+npm install --save redux
 
+```
 
-
-
-
-
-
-
-
-
-
-
-
-
+#Libreria q realiza la vinculacion entre REDUX y React
+```
+npm install --save react-redux
+```
 
 
