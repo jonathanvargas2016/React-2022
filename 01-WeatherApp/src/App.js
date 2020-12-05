@@ -9,8 +9,8 @@ import Toolbar from '@material-ui/core/Toolbar';
 import IconButton from '@material-ui/core/IconButton';
 import ForecastExtended from './components/ForecastExtended'
 import {setCity} from './actions'
-import {store} from './store'
-
+import {connect} from 'react-redux'
+//connect sirve para conectar react y redux...
 
 const cities = [
     'Buenos Aires,ar',
@@ -33,10 +33,13 @@ class App extends Component{
         this.setState({
             city,
         })
-        store.dispatch(
-            setCity(city)
-            )//ayuda a disparar la accion
 
+
+        // store.dispatch(
+        //     setCity(city) //Accion
+        //     )//ayuda a disparar la accion
+
+        this.props.setCity(city);
   }
 
 
@@ -128,4 +131,35 @@ class App extends Component{
   }
 }
 
-export default App;
+//CONNECT
+//se utiliza sobre cada componente que queramos darle acceso al store
+//de alguna manera le envuelve al componente
+//y le ofrece la capacidad de acceder al store
+    //export default App;
+
+
+const mapDispatchToPropsActions = dispatch =>({
+    setCity: value =>dispatch(setCity(value))
+});
+const AppConnected = connect(null,mapDispatchToPropsActions)(App)//retorna otra funcion....
+export default AppConnected;
+
+/*Funcionamiento de connect
+*
+* const connect = (value1),value2)=>{
+*   console.log(value1)
+*   console.log(value2)
+*
+*   return (componente)=>{
+*       const result = `${componente}-${value1*value2}`
+*       console.log(result)
+*       return result
+*   }
+*
+* }
+*
+* Const componentConectado = connect(2,3);
+* componentConectado('APP')
+*
+*
+* */

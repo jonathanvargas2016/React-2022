@@ -10,16 +10,11 @@ import * as serviceWorker from './serviceWorker';
 //provider hace proveer del store a los componentes.
 
 ReactDOM.render(
-  <React.StrictMode>
-
     <Provider store={store}>
-
-        <App />
-
-    </Provider>
-
-
-  </React.StrictMode>,
+      <React.StrictMode>
+          <App />
+        </React.StrictMode>
+    </Provider>,
   document.getElementById('root') //la app vivira dentro del contendor root --> index.html
 );
 
