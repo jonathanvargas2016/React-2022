@@ -8,7 +8,8 @@ import Typography from '@material-ui/core/Typography'
 import Toolbar from '@material-ui/core/Toolbar';
 import IconButton from '@material-ui/core/IconButton';
 import ForecastExtended from './components/ForecastExtended'
-import {createStore} from 'redux'
+import {setCity} from './actions'
+import {store} from './store'
 
 
 const cities = [
@@ -20,8 +21,6 @@ const cities = [
 
 class App extends Component{
 
-    //creamos el store y pasamos el reduxser
-    store = createStore(()=>{},window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__());
 
     constructor() {
         super();
@@ -34,8 +33,8 @@ class App extends Component{
         this.setState({
             city,
         })
-        this.store.dispatch(
-            {type:"setCity",value:city}
+        store.dispatch(
+            setCity(city)
             )//ayuda a disparar la accion
 
   }

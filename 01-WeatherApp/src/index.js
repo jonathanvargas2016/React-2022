@@ -1,12 +1,24 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import {Provider} from 'react-redux'
+import {store} from './store'
 import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
 
+//con la importacion del provider ya esta funcionando react-redux junto con la app
+//provider hace proveer del store a los componentes.
+
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+
+    <Provider store={store}>
+
+        <App />
+
+    </Provider>
+
+
   </React.StrictMode>,
   document.getElementById('root') //la app vivira dentro del contendor root --> index.html
 );
