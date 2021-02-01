@@ -127,4 +127,39 @@ npm install --save redux
 npm install --save react-redux
 ```
 
+#Smart components vs Dumb Components => containers
+
+	son componentes tienen acceso al estado de la aplicacion. (connect)
+	..decision de arquitectura.
+	..que cantidad de containers queremos utilizar.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 

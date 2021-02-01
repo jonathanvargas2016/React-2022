@@ -9,6 +9,7 @@ import Toolbar from '@material-ui/core/Toolbar';
 import IconButton from '@material-ui/core/IconButton';
 import ForecastExtended from './components/ForecastExtended'
 import {setCity} from './actions'
+import PropTypes from 'prop-types'
 import {connect} from 'react-redux'
 //connect sirve para conectar react y redux...
 
@@ -136,6 +137,10 @@ class App extends Component{
 //de alguna manera le envuelve al componente
 //y le ofrece la capacidad de acceder al store
     //export default App;
+
+App.propTypes = {
+    setCity:PropTypes.func.isRequired,
+}
 
 
 const mapDispatchToPropsActions = dispatch =>({
