@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import './App.css';
-import LocationList from "./components/LocationList";
+import LocationListContainer from "./containers/LocationListContainer";
 import {Grid,Row,Col} from 'react-flexbox-grid'
 import Paper from '@material-ui/core/Paper'
 import AppBar from '@material-ui/core/AppBar'
@@ -8,10 +8,7 @@ import Typography from '@material-ui/core/Typography'
 import Toolbar from '@material-ui/core/Toolbar';
 import IconButton from '@material-ui/core/IconButton';
 import ForecastExtended from './components/ForecastExtended'
-import {setCity} from './actions'
-import PropTypes from 'prop-types'
-import {connect} from 'react-redux'
-//connect sirve para conectar react y redux...
+
 
 const cities = [
     'Buenos Aires,ar',
@@ -29,20 +26,6 @@ class App extends Component{
             city:null
         }
     }
-
-    handleSelectedLocation = (city) =>{
-        this.setState({
-            city,
-        })
-
-
-        // store.dispatch(
-        //     setCity(city) //Accion
-        //     )//ayuda a disparar la accion
-
-        this.props.setCity(city);
-  }
-
 
   render = () => {
       const {city} = this.state;
@@ -105,9 +88,8 @@ class App extends Component{
               <Row>
 
                   <Col xs={12} md={6}>
-                      <LocationList cities={cities}
-                                    onSelectedLocation={this.handleSelectedLocation}>
-                      </LocationList>
+                      <LocationListContainer cities={cities}>
+                      </LocationListContainer>
                   </Col>
                   <Col xs={12} md={6}>
 
@@ -132,22 +114,8 @@ class App extends Component{
   }
 }
 
-//CONNECT
-//se utiliza sobre cada componente que queramos darle acceso al store
-//de alguna manera le envuelve al componente
-//y le ofrece la capacidad de acceder al store
-    //export default App;
 
-App.propTypes = {
-    setCity:PropTypes.func.isRequired,
-}
-
-
-const mapDispatchToPropsActions = dispatch =>({
-    setCity: value =>dispatch(setCity(value))
-});
-const AppConnected = connect(null,mapDispatchToPropsActions)(App)//retorna otra funcion....
-export default AppConnected;
+export default App;
 
 /*Funcionamiento de connect
 *
