@@ -7,8 +7,7 @@ import AppBar from '@material-ui/core/AppBar'
 import Typography from '@material-ui/core/Typography'
 import Toolbar from '@material-ui/core/Toolbar';
 import IconButton from '@material-ui/core/IconButton';
-import ForecastExtended from './components/ForecastExtended'
-
+import ForecastExtendedContainer from "./containers/ForecastExtendedContainer";
 
 const cities = [
     'Buenos Aires,ar',
@@ -19,16 +18,7 @@ const cities = [
 
 class App extends Component{
 
-
-    constructor() {
-        super();
-        this.state ={
-            city:null
-        }
-    }
-
   render = () => {
-      const {city} = this.state;
       return (
           // <Grid fluid>
           //
@@ -95,13 +85,7 @@ class App extends Component{
 
                       <Paper elevation={4}>
                           <div className='detail'>
-
-                              {city?
-                                  <ForecastExtended city={city}></ForecastExtended>:
-                                  <h2 className='app-title'>No se selecciono ciudad</h2>
-
-                              }
-
+                              <ForecastExtendedContainer></ForecastExtendedContainer>
                           </div>
                       </Paper>
 

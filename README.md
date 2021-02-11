@@ -118,13 +118,13 @@ Utiliza la @media regla para incluir un bloque de propiedades CSS solo si una de
 	
 #Instalar REDUX
 ```
-npm install --save redux
+$npm install --save redux
 
 ```
 
 #Libreria q realiza la vinculacion entre REDUX y React
 ```
-npm install --save react-redux
+$npm install --save react-redux
 ```
 
 #Smart components vs Dumb Components => containers
@@ -133,14 +133,21 @@ npm install --save react-redux
 	..decision de arquitectura.
 	..que cantidad de containers queremos utilizar.
 
+#payload 
+		
+
+#Funcion pura
+	depende unicamente de los parametros de entrada.. el retorno
+	depende de los valores que le pasamos.
+	
+	Nunca alterar los estados.. se debe hacer copias..
 
 
-
-
-
-
-
-
+#Middlwares.
+	estructuras que se adosan al store. se intepondrian a cada accion..
+```
+$npm install --save redux-thunk
+```
 
 
 

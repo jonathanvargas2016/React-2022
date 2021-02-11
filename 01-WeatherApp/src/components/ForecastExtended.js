@@ -4,21 +4,6 @@ import './styles.css';
 import ForecastItem from './ForecastItem'
 import TransformForecast from '../services/transformForecast'
 
-// const days = [
-//     'Lunes',
-//     'Martes',
-//     'Miercoles',
-//     'Jueves',
-//     'Viernes'
-// ]
-//
-// const data = {
-//     temperature:10,
-//     weatherState:'normal',
-//     humidity:20,
-//     wind:'normal',
-// }
-
 class ForecastExtended extends Component {
     key = '927958a9f637a1a8b0e46e9118bf112b'
     url = 'http://api.openweathermap.org/data/2.5/forecast'
