@@ -5,7 +5,7 @@ import './styles.css'
 
 const LocationList = ({cities,onSelectedLocation}) => {
     const handleWeatherLocationClic = city => {
-        console.log('handleWeatherLocationClic');
+        console.log('handleWeatherLocationClic ', city);
         onSelectedLocation(city);
     }
 
@@ -13,9 +13,10 @@ const LocationList = ({cities,onSelectedLocation}) => {
 
         //map --> transformaciones de arrays. **Es necesario utilizar una clave
         return (cities.map(city => (
-            <WeatherLocation key={city}
-                             city={city}
-                             onWeatherLocationClic={()=>{handleWeatherLocationClic(city)}}>
+            <WeatherLocation key={city.key}
+                             city={city.name}
+                             onWeatherLocationClic={()=>{handleWeatherLocationClic(city.name)}}
+                             data={city.data}>
             </WeatherLocation>)
         ))
     }

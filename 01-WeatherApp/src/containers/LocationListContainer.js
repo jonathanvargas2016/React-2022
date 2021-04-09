@@ -1,11 +1,15 @@
 import React, {Component} from 'react';
 import LocationList from "../components/LocationList";
-import {setCity} from '../actions'
+import {setSelectedCity,setWeather} from '../actions'
 import PropTypes from 'prop-types'
 import {connect} from 'react-redux'
 //connect sirve para conectar react y redux...
 
 class LocationListContainer extends Component {
+
+    componentDidMount() {
+        this.props.setWeather(this.props.cities)
+    }
 
     handleSelectedLocation = (city) =>{
         // this.setState({
@@ -36,7 +40,8 @@ LocationListContainer.propTypes = {
 
 
 const mapDispatchToPropsActions = dispatch =>({
-    setCity: value =>dispatch(setCity(value))
+    setCity: value =>dispatch(setSelectedCity(value)),
+    setWeather:cities => dispatch(setWeather(cities))
 });
 const LocationListContainerConnect = connect(null,mapDispatchToPropsActions)(LocationListContainer)//retorna otra funcion....
 

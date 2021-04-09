@@ -28,6 +28,7 @@ Si deseaba renderizar un componente de React, comience su nombre con una letra M
 2 forma de renderizar
 <Index/>
 
+#Class component vs functional component
 
 #{} -> con esto se pone el valor de una variable en el html
 <h1>{city}</h1>
@@ -106,9 +107,7 @@ Utiliza la @media regla para incluir un bloque de propiedades CSS solo si una de
 	compara (aplicando heuristica) los componentes resultantes del nuevo estado con los anteriores
 	y busca por cambios.
 
-#React Fiber
 
-	
 
 #SPA vs MPA
 	
@@ -133,8 +132,7 @@ $npm install --save react-redux
 	..decision de arquitectura.
 	..que cantidad de containers queremos utilizar.
 
-#payload 
-		
+
 
 #Funcion pura
 	depende unicamente de los parametros de entrada.. el retorno
@@ -149,9 +147,12 @@ $npm install --save react-redux
 $npm install --save redux-thunk
 ```
 
-
-
-
+#Selectors
+	recortar una porcion del estado global de la aplicacion. se puede usar para el filtrado de informacion
+	
+	
+#reselect
+	tiene Memoized, especie de cache liviana que permite hacer mas eficiente el trabajo con grandes volumenes de datos.
 
 
 
