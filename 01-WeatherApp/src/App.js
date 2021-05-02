@@ -13,7 +13,8 @@ const cities = [
     'Buenos Aires,ar',
     'Washington dc,us',
     'Bogota,col',
-    'Quito,ec'
+    'Quito,ec',
+    'Guayaquil, ec'
 ]
 
 class App extends Component{

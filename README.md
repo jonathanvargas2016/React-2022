@@ -155,7 +155,9 @@ $npm install --save redux-thunk
 	tiene Memoized, especie de cache liviana que permite hacer mas eficiente el trabajo con grandes volumenes de datos.
 
 
-
+#lodash
+	Lodash is a JavaScript library that helps programmers write more concise and maintainable JavaScript.
+	
 
 
 
