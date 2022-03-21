@@ -1,0 +1,20 @@
+
+.locationList{
+    height: 85vh;
+    overflow: auto;/*hace aparecer automaticamente la barra de scroll*/
+}
+
+/*MEDIA QUERY*/
+@media (max-width: 48em){
+    .locationList{
+        max-height: 40vh;
+        margin-bottom: 20px;
+    }
+}
+
+.forescast-title{
+    color: white;
+    text-align: center;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
