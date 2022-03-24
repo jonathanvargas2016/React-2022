@@ -1,33 +1,19 @@
-// Desestructuracion. o
-// Asignacion Desestructurante
+// IMPORT, EXPORT
 
-const persona = {
-    nombre: 'Tony',
-    edad: 45,
-    clave: 'Iroman'
-}
+import {heroes} from './data/heroes'
+// import tecleo = imp
 
-const {nombre, edad, clave} = persona
-
-const {nombre: nombre2} = persona
-
-console.log(edad);
+console.log(heroes)
 
 
-const retornaPersona = ({nombre}) => {
-    console.log(nombre);
-}
+const getHeroeById = id => (
+    heroes.find((element)=> element.id === id)
+)
 
-retornaPersona(persona)
+console.log('By Find ',getHeroeById(1))
 
-
-
-
-
-
-
-
-
-
-
+const getHeroesByOwner = owner => (
+    heroes.filter((heroe)=> heroe.owner === owner)
+)
+console.log("By filter ",getHeroesByOwner('DC'))
 

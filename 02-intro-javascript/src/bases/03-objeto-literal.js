@@ -1,3 +1,4 @@
+//cada objeto tiene su prototype
 const persona = {
     nombre: 'Tony',
     apellido: 'Vegas',
@@ -11,7 +12,6 @@ const persona = {
 }
 
 console.log({persona});
-// console.table({persona});
 console.log(persona)
 
 // clonar un objeto
