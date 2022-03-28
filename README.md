@@ -30,7 +30,7 @@ Si deseaba renderizar un componente de React, comience su nombre con una letra M
 
 # Class component vs functional component
 
-#{} -> con esto se pone el valor de una variable en el html
+# {} -> con esto se pone el valor de una variable en el html
 <h1>{city}</h1>
 
 # Destructuring se conoce cuando a una variable se le asigna el valor de props mediante {}.. el origen y destino tiene el mismo nombre
@@ -58,7 +58,7 @@ libreria para evitar errores.para garantizar que los componentes usen el tipo de
 # Grid Fluid
 Fluid intenta usar todo el ancho de la pantalla
 
-#Sistema de grillas
+# Sistema de grillas
 xs -> celulares
 sm -> tablets
 md -> notebooks
@@ -66,8 +66,6 @@ lg -> laptops
 
 # Media Query
 Utiliza la @media regla para incluir un bloque de propiedades CSS solo si una determinada condición es verdadera.
-
-
 
 # React LifeCycle
 	
@@ -97,7 +95,6 @@ Utiliza la @media regla para incluir un bloque de propiedades CSS solo si una de
 	
 	representacion liviana del DOM.
 	
-
 # OneWayData Flow. Modificacion del dato modifica la vista.
 
 	estado inicial -> 1.virtual DOM => DOM real =>cambio de estado => 2. virtual DOM => Compara 1 y 2 DOM virtual =>Actualiza solo lo necesario del DOM
@@ -106,8 +103,6 @@ Utiliza la @media regla para incluir un bloque de propiedades CSS solo si una de
 	
 	compara (aplicando heuristica) los componentes resultantes del nuevo estado con los anteriores
 	y busca por cambios.
-
-
 
 # SPA vs MPA
 	
