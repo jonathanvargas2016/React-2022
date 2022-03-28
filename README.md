@@ -1,6 +1,11 @@
 # curso-react-2022
 curso de react, em6
 
+# componente
+Pieza de codigo encapsulado reutilizable que puede tener estado o no.
+
+# Estado
+Como se encuentra la informacion del componente en un punto determinado 
 
 #Babel
 es un preprocesador de JS que permite escribir codigo javascript en la ultima especificacion, utilizar jsx
