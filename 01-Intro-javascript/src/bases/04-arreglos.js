@@ -10,7 +10,7 @@ arreglo.push(2)
 arreglo.push(3)
 arreglo.push(4)
 
-// no es recomedable utilizar push por modifica el arreglo principal
+// no es recomedable utilizar push porque modifica el arreglo principal
 
 let arreglo2 = [...arreglo, 2] //clonacion de arreglo
 console.log(arreglo2)

@@ -1,4 +1,4 @@
-const saludar = function saludar(nombre){
+const saludar = function(nombre){
     return `Hola ${nombre}`
 }
 
@@ -9,12 +9,14 @@ const saludar2 = nombre => `hola ${nombre}`
 const saludar3 = () => "Hola Mundo"
 console.log(saludar2('Vegeta'));
 
+// devuelve solo un objeto
 const getUser = () => (
     {
         uid: 123,
         username: 'El_jonat01'
     }
 )
+console.log(getUser())
 
 function getUsuarioActivo(nombre){
     return {
@@ -23,6 +25,7 @@ function getUsuarioActivo(nombre){
     }
 }
 
+// retorna un objecto implicito
 const usuarioActivo = nombre => (
     {
         uid: 'ABC567',
