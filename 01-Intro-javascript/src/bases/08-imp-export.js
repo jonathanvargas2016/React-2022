@@ -1,5 +1,5 @@
 // IMPORT, EXPORT
-
+// importacion por defecto, { importacion independiente }
 import heroes, {Owners} from '../data/heroes'
 // import tecleo = imp
 

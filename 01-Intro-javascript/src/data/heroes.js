@@ -27,7 +27,7 @@ const heroes = [
 ]
 
 export const Owners = ['DC', 'Marvel']
-export default heroes
+export default heroes // 
 // const Owners = ['DC', 'Marvel']
 
 // export {
