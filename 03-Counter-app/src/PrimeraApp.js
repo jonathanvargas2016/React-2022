@@ -1,9 +1,11 @@
 import React, { Fragment } from 'react';
+import PropTypes from 'prop-types'
+
 //                          properties
-const PrimeraApp = ( { saludo = "Hola Mundo", nombre } ) => {
+const PrimeraApp = ( { saludo, subtitulo} ) => {
 
     console.log(saludo)
-    console.log(nombre)
+    console.log(subtitulo)
 
         return (
             // fragment forma corta
@@ -15,11 +17,17 @@ const PrimeraApp = ( { saludo = "Hola Mundo", nombre } ) => {
             <Fragment>
                 <h1> {saludo} </h1>
                 {/* <pre> { JSON.stringify(saludo, null, 3) } </pre> */}
-                <p>Bienvenido { nombre } </p>
+                <p>Bienvenido { subtitulo } </p>
             </Fragment>
         )
 
 }
-
+// definir el tipo
+PrimeraApp.propTypes = {
+    saludo: PropTypes.string.isRequired,
+}
+PrimeraApp.defaultProps = {
+    subtitulo: 'Dragon Ball Z'
+}
 export default PrimeraApp
 
