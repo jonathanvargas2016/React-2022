@@ -7,12 +7,14 @@ Pieza de codigo encapsulado reutilizable que puede tener estado o no.
 # Estado
 Como se encuentra la informacion del componente en un punto determinado 
 
-#Babel
+# Babel
 es un preprocesador de JS que permite escribir codigo javascript en la ultima especificacion, utilizar jsx
 y genera un codigo JS que entiendan todos los navegadores.
 
+# Manejo de eventos
+https://es.reactjs.org/docs/events.html
 
-#JSX
+# JSX
 permite escribir HTML dentro del JS
 
 

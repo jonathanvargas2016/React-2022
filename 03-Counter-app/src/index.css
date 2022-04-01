@@ -5,3 +5,13 @@ html, body {
     font-size: 1.3rem;
     padding: 70px;
 }
+button{
+    font-size: 1.3rem;
+    margin-right: 10px;
+    padding: 10px;
+    background-color: red;
+    border: 1px solid red;
+    color: #fff;
+    border-radius: 10px;
+    cursor: pointer;
+}
