@@ -4,8 +4,7 @@ import PropTypes from 'prop-types'
 const CounterApp = ({ value }) => {
 
     // useState
-    const [counter, setCounter] = useState(0);
-     
+    const [counter, setCounter] = useState( value );
     // para cambiar el valor del useState se lo debe hacer desde la funcion setNombre
     
 
@@ -17,12 +16,17 @@ const CounterApp = ({ value }) => {
         
     }
 
+    const handleReset = () => setCounter(counter - 1)
+
+    const handleSubtract = () => setCounter(value)
 
     return <>
         <h1>CounterApp</h1>
         <h2> { counter } </h2>
         {/* <button onClick={ e => handleAdd(e)}> + 1 </button> */}
         <button onClick={ handleAdd }> + 1 </button>
+        <button onClick={ handleSubtract }> Reset </button>
+        <button onClick={ () => handleReset() }> - 1 </button>
 
     </>
 }
