@@ -165,7 +165,11 @@ $npm install --save redux-thunk
 #lodash
 	Lodash is a JavaScript library that helps programmers write more concise and maintainable JavaScript.
 	
-
+# pruebas
+AAA 
+	Arrange - Arreglar: preparamos el ambiente a probar
+	Act - Actuar: aplicar acciones al sujeto de pruebas
+	Assert - Afirmar: observar el comportamiento resultante
 
 
 
