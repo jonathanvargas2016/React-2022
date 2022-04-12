@@ -171,8 +171,10 @@ AAA
 	Act - Actuar: aplicar acciones al sujeto de pruebas
 	Assert - Afirmar: observar el comportamiento resultante
 
+# Jest
+https://jestjs.io/
 
-
+$npm run test
 
 
 
