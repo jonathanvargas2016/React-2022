@@ -11,6 +11,8 @@ Como se encuentra la informacion del componente en un punto determinado
 es un preprocesador de JS que permite escribir codigo javascript en la ultima especificacion, utilizar jsx
 y genera un codigo JS que entiendan todos los navegadores.
 
+# Manejo de eventos
+https://es.reactjs.org/docs/events.html
 
 # JSX
 permite escribir HTML dentro del JS
@@ -158,10 +160,16 @@ $ npm install --save redux-thunk
 # lodash
 	Lodash is a JavaScript library that helps programmers write more concise and maintainable JavaScript.
 	
+# pruebas
+AAA 
+	Arrange - Arreglar: preparamos el ambiente a probar
+	Act - Actuar: aplicar acciones al sujeto de pruebas
+	Assert - Afirmar: observar el comportamiento resultante
 
+# Jest
+https://jestjs.io/
 
-
-
+$npm run test
 
 
 
