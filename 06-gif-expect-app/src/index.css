@@ -13,3 +13,10 @@ body {
     border: 1px solid red;
     
 }
+
+input {
+    color: grey;
+    font-size: 1.2rem;
+    width: 100%;
+    
+}
