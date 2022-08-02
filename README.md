@@ -177,6 +177,8 @@ https://jestjs.io/
 $npm run test
 
 
+# useEffect
+ejecutar cierto codigo de manera condicional
 
 
 
