@@ -9,6 +9,11 @@ export const GifExpertApp = () => {
     const [categories, setCategories] = useState(['Dragon Ball'])
 
     const handleAdd = (newCategory) => {
+
+        if (categories.includes(newCategory)) {
+            return
+        }
+
         setCategories([newCategory, ...categories])
         // setCategories(cats => [...cats, 'Naruto'])
 
@@ -24,11 +29,9 @@ export const GifExpertApp = () => {
             <hr />
             {/* <button className='btn-add' type='button' onClick={handleAdd}>Agregar</button> */}
             {/* <button className='btn-add' type='button' onClick={() => handleAdd()}>Agregar</button> */}
-            <ol>
-                {
-                    categories.map((category) => <GifGrid key={category} category={category}></GifGrid>)
-                }
-            </ol>
+            {
+                categories.map((category) => <GifGrid key={category} category={category}></GifGrid>)
+            }
         </>
     )
 }
