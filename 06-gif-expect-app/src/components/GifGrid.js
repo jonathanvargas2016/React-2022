@@ -10,18 +10,30 @@ export const GifGrid = ({ category }) => {
 
     // getGifs() // *** PESIMA PRACTICA ***no colocar directamente una funcion en el functional component
 
+    const getImages = async () => {
+        const newImages = await getGifs(category)
+        setImages(newImages)
+    }
+
+
     useEffect(() => {
-        getGifs(category)
+        getImages()
     }, []) // hook se dispara solo una vez cuando se construye este componente
 
     return (
         <>
             <h3>{category}</h3>
-            {
-                images.map((img) => {
-                    return <GifGrifItem key={img.id} img={img} ></GifGrifItem>
-                })
-            }
+            <ol className='card-grid'>
+                {
+                    images.map((img) => {
+                        return <GifGrifItem
+                            key={img.id}
+                            {...img} > 
+
+                        </GifGrifItem>
+                    })
+                }
+            </ol>
         </>
     )
 }

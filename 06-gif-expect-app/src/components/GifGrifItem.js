@@ -1,11 +1,10 @@
 import React from 'react'
 
-export const GifGrifItem = (img) => {
-    const {id, title, url } = img
-    console.log(url)
+export const GifGrifItem = ({title, url}) => {
     return (
-        <div>
-
-        </div>
+        <li className='card'>
+            <img src={url} alt={title} />
+            <p>{title} </p>
+        </li>
     )
 }
