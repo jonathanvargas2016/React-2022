@@ -1,24 +1,12 @@
-import React, { useEffect, useState } from 'react'
+import React from 'react'
 import { GifGrifItem } from './GifGrifItem'
-import { getGifs } from '../Helpers/getGifs'
+import { useFetchGifs } from '../hooks/useFetchGifs'
 
 
 
 export const GifGrid = ({ category }) => {
 
-    const [images, setImages] = useState([])
-
-    // getGifs() // *** PESIMA PRACTICA ***no colocar directamente una funcion en el functional component
-
-    const getImages = async () => {
-        const newImages = await getGifs(category)
-        setImages(newImages)
-    }
-
-
-    useEffect(() => {
-        getImages()
-    }, []) // hook se dispara solo una vez cuando se construye este componente
+    const {images, isLoading} = useFetchGifs(category)
 
     return (
         <>
