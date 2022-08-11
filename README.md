@@ -165,8 +165,15 @@ $npm install --save redux-thunk
 #lodash
 	Lodash is a JavaScript library that helps programmers write more concise and maintainable JavaScript.
 	
-# pruebas
-AAA 
+
+# useEffect
+ejecutar cierto codigo de manera condicional
+
+----------------------------------------------------------------------
+
+
+# Pruebas
+ 
 	Arrange - Arreglar: preparamos el ambiente a probar
 	Act - Actuar: aplicar acciones al sujeto de pruebas
 	Assert - Afirmar: observar el comportamiento resultante
@@ -176,14 +183,13 @@ https://jestjs.io/
 
 $npm run test
 
+## instalacion necesaria
+1. npm install --save-dev jest babel-jest @babel/preset-env @babel/preset-react    
+2. npm install --save-dev @testing-library/react @types/jest jest-environment-jsdom
 
-# useEffect
-ejecutar cierto codigo de manera condicional
-
-
-
-
-
+### probar compontentes
+	
+	render(<component />)
 
 
 
