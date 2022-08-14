@@ -189,7 +189,8 @@ $npm run test
 
 ### probar compontentes
 	
-	render(<component />)
+	const {container} = render(<component />)
+    expect(container).toMatchSnapshot()
 
 
 
