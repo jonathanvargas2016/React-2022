@@ -193,5 +193,6 @@ $npm run test
     expect(container).toMatchSnapshot()
 
 
-
+# Crear app with Vite
+https://vitejs.dev/guide/#community-templates
 
