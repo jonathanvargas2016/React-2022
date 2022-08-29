@@ -203,3 +203,6 @@ useFetch: peticiones
 useState: manejar el cambio de estado
 useRef: mantener una referencia y si esa ref cambia no vuelva a renderizar
 useLayoutEffect: se lanza despues de la renderizacion del component.
+
+
+React.memo: evitar renderizar componentes no deseados en el componente principal
