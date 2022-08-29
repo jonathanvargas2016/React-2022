@@ -196,3 +196,10 @@ $npm run test
 # Crear app with Vite
 https://vitejs.dev/guide/#community-templates
 
+# HOOKS
+https://es.reactjs.org/docs/hooks-reference.html#uselayouteffect
+useEffect: detectar cambios
+useFetch: peticiones
+useState: manejar el cambio de estado
+useRef: mantener una referencia y si esa ref cambia no vuelva a renderizar
+useLayoutEffect: se lanza despues de la renderizacion del component.

@@ -20,11 +20,6 @@ export const MultipleCustomHooks = () => {
       }
 
       <button className='btn btn-outline-success' disabled={isLoading} onClick={() => increment()}>Next quote</button>
-
-
-
-
-
     </>
   )
 }
