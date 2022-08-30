@@ -203,6 +203,7 @@ useFetch: peticiones
 useState: manejar el cambio de estado
 useRef: mantener una referencia y si esa ref cambia no vuelva a renderizar
 useLayoutEffect: se lanza despues de la renderizacion del component.
-useMemo: mejorar el proceso de ciertas tareas pesadas
+useMemo: mejorar el proceso de ciertas tareas pesadas. 
+useCallback: memoriza funciones que apuntan a una memoria diferente. Devuelve una funcion
 
-React.memo: evitar renderizar componentes no deseados en el componente principal
+React.memo: evitar renderizar componentes no deseados en el componente principal. Memoriza (Cuando el hook memo es llamada de un agente externo no funcionara porque lo que esta apuntando a una memoria diferente)
