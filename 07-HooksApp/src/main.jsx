@@ -14,6 +14,8 @@ import ReactDOM from 'react-dom/client'
 import { Padre } from './08-tarea-memo/Padre'
 import './index.css'
 
+import './09-useReducer/intro-reducer'
+
 ReactDOM.createRoot(document.getElementById('root')).render(
   <div className='container'>
     <Padre />

@@ -207,3 +207,8 @@ useMemo: mejorar el proceso de ciertas tareas pesadas.
 useCallback: memoriza funciones y objetos que apuntan a una posicion de memoria diferente. Devuelve una funcion
 
 React.memo: evitar renderizar componentes no deseados en el componente principal. Memoriza (Cuando el hook memo es llamada de un agente externo no funcionara porque lo que esta apuntando a una memoria diferente)
+
+
+# REDUCER
+https://es.reactjs.org/docs/hooks-reference.html#usereducer
+es una funcion pura (resolverse de manera interna) que no puede ser asincrona y retorna un nuevo estado.
