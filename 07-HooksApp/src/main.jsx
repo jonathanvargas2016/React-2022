@@ -1,5 +1,6 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
+import { TodoApp } from './09-useReducer/TodoApp'
 // import { CallbackHook } from './06-memos/CallbackHook'
 // import { FormWithCustomHook } from './02-useEffect/FormWithCustomHook'
 // import { MultipleCustomHooks } from './03-examples/MultipleCustomHooks'
@@ -11,13 +12,14 @@ import ReactDOM from 'react-dom/client'
 //import { CounterWithCustomHook } from './01-useState/CounterWithCustomHook'
 // import { HooksApp } from './HooksApp'
 // import { SimpleForm } from './02-useEffect/SimpleForm'
-import { Padre } from './08-tarea-memo/Padre'
+//import { Padre } from './08-tarea-memo/Padre'
+
 import './index.css'
 
-import './09-useReducer/intro-reducer'
+// import './09-useReducer/intro-reducer'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
-  <div className='container'>
-    <Padre />
+  <div className='container' style={{marginTop: '20px'}}>
+    <TodoApp />
   </div>
 )
