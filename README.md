@@ -212,3 +212,8 @@ React.memo: evitar renderizar componentes no deseados en el componente principal
 # REDUCER
 https://es.reactjs.org/docs/hooks-reference.html#usereducer
 es una funcion pura (resolverse de manera interna) que no puede ser asincrona y retorna un nuevo estado.
+
+# Router
+
+https://v5.reactrouter.com/web/api/NavLink
+https://v5.reactrouter.com/web/guides/quick-start
