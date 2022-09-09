@@ -217,3 +217,8 @@ es una funcion pura (resolverse de manera interna) que no puede ser asincrona y 
 
 https://v5.reactrouter.com/web/api/NavLink
 https://v5.reactrouter.com/web/guides/quick-start
+
+tag contenedora: Routes
+tag hija: Route
+tag similar a la tag ancla: Link
+tag NavbLink es utilizado en la navegacion. Es similar al Link solo que se puede utilizar una clase dependiendo donde se encuentre
