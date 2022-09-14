@@ -182,10 +182,11 @@ ejecutar cierto codigo de manera condicional
 https://jestjs.io/
 
 $npm run test
-
+https://gist.github.com/Klerith/ca7e57fae3c9ab92ad08baadc6c26177
 ## instalacion necesaria
 1. npm install --save-dev jest babel-jest @babel/preset-env @babel/preset-react    
 2. npm install --save-dev @testing-library/react @types/jest jest-environment-jsdom
+3. npm install whatwg-fetch --save (si usa fetch)
 
 ### probar compontentes
 	
@@ -205,6 +206,7 @@ useRef: mantener una referencia y si esa ref cambia no vuelva a renderizar
 useLayoutEffect: se lanza despues de la renderizacion del component.
 useMemo: mejorar el proceso de ciertas tareas pesadas. 
 useCallback: memoriza funciones y objetos que apuntan a una posicion de memoria diferente. Devuelve una funcion
+useContext: ayuda a compartir datos entre paginas
 
 React.memo: evitar renderizar componentes no deseados en el componente principal. Memoriza (Cuando el hook memo es llamada de un agente externo no funcionara porque lo que esta apuntando a una memoria diferente)
 
