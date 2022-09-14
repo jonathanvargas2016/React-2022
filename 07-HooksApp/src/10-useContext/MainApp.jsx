@@ -4,10 +4,11 @@ import { HomePage } from './HomePage'
 import { AboutPage } from './AboutPage'
 import { LoginPage } from './LoginPage'
 import { Navbar } from './Navbar'
+import { UserProvider } from './context/UserProvider'
 
 export const MainApp = () => {
     return (
-        <>
+        <UserProvider>
             <h1>MainApp</h1>
             <hr />
 
@@ -24,6 +25,6 @@ export const MainApp = () => {
                 {/* navegar a una ruta mas especifica. Navigate. componente q a penas se renderiza hace la navegacion al path  especificado*/}
                 <Route path='/*' element={<Navigate to="/about" />} />
             </Routes>
-        </>
+        </UserProvider>
     )
 }
